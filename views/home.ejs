@@ -62,6 +62,10 @@
                 return promise;
             };
 
+            if (document.getElementById("inputType").value == "Type" || document.getElementById("inputSize").value == "Size" || document.getElementById("inputWealth").value == "Wealth") {
+                document.getElementById("OutputBox").innerHTML = "Please select a Type, Size, and Wealth";
+            }
+
             var getURL = 'https://6sracewg2m.execute-api.us-east-1.amazonaws.com/ListGet?Type=' + document.getElementById("inputType").value + '&Size=' + document.getElementById("inputSize").value + '&Wealth=' + document.getElementById("inputWealth").value;
 
             var getData = () => {
