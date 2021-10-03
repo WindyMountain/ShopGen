@@ -1,0 +1,145 @@
+<% include partials/header %>
+
+    
+<div class="row" id="MainRow">
+    <div id="InputCol" class="col-sm-4">
+        <div class="row InputRow">
+            <select class="InputSelect custom-select custom-select-lg mb-3" id="inputType">
+                <option selected>Type</option>
+                <option value="GeneralMerchant">General Merchant</option>
+                <option value="MagicalScholar">Magical Scholar</option>
+                <option value="Blacksmith">Blacksmith</option>
+            </select>
+        </div>
+        <div class="row InputRow">
+            <select class="InputSelect custom-select custom-select-lg mb-3" id="inputSize">
+                <option selected>Size</option>
+                <option value="Traveller">Traveller</option>
+                <option value="Stall">Stall</option>
+                <option value="Wagon">Wagon</option>
+                <option value="Store">Store</option>
+                <option value="Warehouse">Warehouse</option>
+            </select>
+        </div>
+        <div class="row InputRow">
+            <select class="InputSelect custom-select custom-select-lg mb-3" id="inputWealth">
+                <option selected>Wealth</option>
+                <option value="Poor">Poor</option>
+                <option value="Modest">Modest</option>
+                <option value="Wealthy">Wealthy</option>
+                <option value="Extravagant">Extravagant</option>
+            </select>
+        </div>
+        <div class="InputButton row justify-content-center">
+            <button type="button" class="btn RollButton" id="rollButton">Roll</button>
+        </div>
+    </div>
+    <div id="OutputCol" class="container col-sm-8">
+        <div id="OutputBox">
+
+        </div>
+    </div>
+    <script>
+        function roll() {
+            document.getElementById("OutputBox").innerHTML = 'Loading...';
+            var sendHTTPRequest = (method, url, data) => {
+                var promise = new Promise((resolve, reject) => {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open(method, url);
+
+                    xhr.responseType = 'json';
+
+                    if (data) {
+                        xhr.setRequestHeader('Content-Type', 'application/json');
+                    }
+
+                    xhr.onload = () => {
+                        resolve(xhr.response);
+                    };
+
+                    xhr.send(JSON.stringify(data));
+                });
+                return promise;
+            };
+
+            var getURL = 'https://6sracewg2m.execute-api.us-east-1.amazonaws.com/ListGet?Type=' + document.getElementById("inputType").value + '&Size=' + document.getElementById("inputSize").value + '&Wealth=' + document.getElementById("inputWealth").value;
+
+            var getData = () => {
+                sendHTTPRequest('GET', getURL).then(responseData => {
+                    //Make oldJSON the returned GET
+                    //Make site container a bootstrap grid with outlines(?) Name 6 / Amount 2/ Cost 2 / Weight 2
+                    //Make Script a function and on click to Roll button
+                    var JS = JSON.parse(JSON.stringify(responseData));
+                    var containerName = ['<p style="font-weight: bold;">Name</p>'];
+                    var containerAmount = ['<p style="font-weight: bold;">Amount</p>'];
+                    var containerCost = ['<p style="font-weight: bold;">Cost</p>'];
+                    var containerWeight = ['<p style="font-weight: bold;">Weight</p>'];
+
+
+                    for (let i = 0; i < JS.length; i++) {
+
+                        if (JS[i].Rarity == 0) {
+                            containerName.push('<p>' + JS[i].Name + "</p>");
+                        }
+                        else if (JS[i].Rarity == 1) {
+                            containerName.push('<p style="color:green;">' + JS[i].Name + "</p>");
+                        }
+                        else if (JS[i].Rarity == 2) {
+                            containerName.push('<p style="color:blue;">' + JS[i].Name + "</p>");
+                        }
+                        else if (JS[i].Rarity == 3) {
+                            containerName.push('<p style="color:purple;">' + JS[i].Name + "</p>");
+                        }
+                        else if (JS[i].Rarity == 4) {
+                            containerName.push('<p style="color:orange;">' + JS[i].Name + "</p>");
+                        }
+                        else {
+                            containerName.push('<p style="color:red;">' + JS[i].Name + "</p>");
+                        }
+
+                        containerAmount.push("<p>x" + JS[i].Amount + "</p>");
+
+                        if (JS[i].Cost == 0) {
+                            containerCost.push("<p>" + "DM's Choice" + "</p>");
+                        } else if (JS[i].Cost == 0 && JS[i].Cost < 10) {
+                            containerCost.push("<p>" + JS[i].Cost + "cp</p>");
+
+                        } else if (JS[i].Cost > 9 && JS[i].Cost < 100) {
+                            containerCost.push("<p>" + JS[i].Cost / 10 + "sp</p>");
+
+                        } else {
+                            containerCost.push("<p>" + JS[i].Cost / 100 + "gp</p>");
+                        }
+
+                        containerWeight.push("<p>" + JS[i].Weight + "lbs</p>");
+                    }
+
+                    var result = [];
+
+                    for (let i = 0; i < containerName.length; i++) {
+                        result.push('<div class="row">' + '<div class="col">' + containerName[i] + '</div>' + '<div class="col">' + containerAmount[i] + '</div>' + '<div class="col">' + containerCost[i] + '</div>' + '<div class="col">' + containerWeight[i] + '</div>' + '</div>')
+                        //result.push(containerName[i] + containerAmount[i] + containerCost[i] + containerWeight[i]);
+                    }
+
+                    var resultCombined = () => {
+                        var x = "";
+                        for (let i = 0; i < result.length; i++) {
+                            x += result[i];
+                        }
+                        return x;
+                    }
+
+
+                    document.getElementById("OutputBox").innerHTML = resultCombined();
+                });
+            };
+            getData()
+        }
+        document.getElementById("rollButton").onclick = (event) => {
+            event.preventDefault();
+            roll();
+        };
+    </script>
+</div>
+
+<% include partials/footer %>

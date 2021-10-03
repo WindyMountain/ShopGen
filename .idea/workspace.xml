@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="abad0ea4-fdb7-498a-954c-c456a36361c3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/public/images/Dice.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\QT3.14\Desktop\Source\Portfolio\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1SRi6vUPzgtPhU5ifoIOtaLfnPO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\QT3.14\Desktop\Source\Portfolio\public\videos" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/app.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.app.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="abad0ea4-fdb7-498a-954c-c456a36361c3" name="Default Changelist" comment="" />
+      <created>1571532636702</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571532636702</updated>
+      <workItem from="1571532638644" duration="898000" />
+      <workItem from="1571533752777" duration="8730000" />
+      <workItem from="1571602398360" duration="19814000" />
+      <workItem from="1571703082474" duration="80000" />
+      <workItem from="1571764875088" duration="948000" />
+      <workItem from="1572240064866" duration="732000" />
+      <workItem from="1573015016122" duration="7804000" />
+      <workItem from="1573074434059" duration="2295000" />
+      <workItem from="1573079085632" duration="13428000" />
+      <workItem from="1573240668928" duration="23384000" />
+      <workItem from="1573418157880" duration="9366000" />
+      <workItem from="1573679078382" duration="617000" />
+      <workItem from="1574132420005" duration="1500000" />
+      <workItem from="1576146320011" duration="24000" />
+      <workItem from="1576146798206" duration="71000" />
+      <workItem from="1576293290176" duration="4536000" />
+      <workItem from="1576628990132" duration="667000" />
+      <workItem from="1592440338422" duration="602000" />
+      <workItem from="1592445632709" duration="14000" />
+      <workItem from="1593034669457" duration="1730000" />
+      <workItem from="1625537423854" duration="96000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/gti" />
+    </ignored-roots>
+  </component>
+</project>

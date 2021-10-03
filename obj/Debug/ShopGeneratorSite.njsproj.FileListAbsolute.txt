@@ -1,0 +1,3 @@
+C:\Users\QT3.14\Source\Repos\ShopGen\obj\Debug\ShopGeneratorSite.njsproj.AssemblyReference.cache
+C:\Users\QT3.14\Source\Repos\ShopGen\obj\Debug\ShopGeneratorSite.njsproj.CoreCompileInputs.cache
+C:\Users\QT3.14\Source\Repos\ShopGen\bin\Microsoft.NodejsTools.WebRole.dll
