@@ -104,7 +104,8 @@
 
                             if (JS[i].Cost == 0) {
                                 containerCost.push("<p>" + "DM's Choice" + "</p>");
-                            } else if (JS[i].Cost == 0 && JS[i].Cost < 10) {
+
+                            } else if (JS[i].Cost > 0 && JS[i].Cost < 10) {
                                 containerCost.push("<p>" + JS[i].Cost + "cp</p>");
 
                             } else if (JS[i].Cost > 9 && JS[i].Cost < 100) {
